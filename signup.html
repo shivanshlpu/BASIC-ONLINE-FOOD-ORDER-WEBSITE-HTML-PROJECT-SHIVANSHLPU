@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <style>
+        body{
+            background-image: url(login2.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+#loginForm {
+    margin: 200px auto;
+    width: 300px;
+    padding: 30px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 12px #aaa;
+    
+}
+
+#loginForm input {
+    display: block;
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+#loginForm button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+.logo {
+    background-image: url(photo1.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 22%;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 20px;
+    margin-left: 38%;
+}
+.para{
+    color: #4CAF50;
+}
+#ji{
+    color:rgb(223, 226, 226);
+}
+    </style>
+</head>
+<body>
+
+    <form onsubmit="return login()" action="login.html">
+    <div id="loginForm" >
+        <div class="logo"></div>
+        <input type="text" id="username" placeholder="Create username">
+        <input type="password" id="password" placeholder=" Create password">
+        <input type="password" id="password" placeholder=" confrim password">
+        <button onclick="login()">Signup</button><br>
+        ALREADY HAVE ACCOUNT &nbsp; &nbsp;<a href="login.html" id="ji">LOGIN?</a><br>
+        </div>
+       
+    </div></form>
+    </div>
+    <script>
+        function login() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            var password = document.getElementById('password').value
+            if(username === 'shivansh' && password === 'password' && password === password) {
+                document.getElementById('loginForm').style.display = 'none';
+                document.getElementById('password created succesfully').style.display = 'block';
+            } else {
+                alert('Filled all Details Frist!!');
+                return false
+            }
+        }
+        </script>
+</body>
+</html>
